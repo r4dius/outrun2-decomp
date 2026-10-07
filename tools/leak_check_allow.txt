@@ -1,0 +1,47 @@
+# Symbols whose bytes also occur in OR2006C2C.EXE because both link the same
+# third-party library (Ogg Vorbis, zlib, FFmpeg, dav1d). They are library
+# tables, not game data. One regular expression per line (Python syntax),
+# matched against the symbol name leak_check.py reports.
+^vwin\d+
+^tonemasks
+^ff_
+^FLOOR1_
+^crc_
+^ATH$
+^stereo_threshholds
+^dav1d_
+^ntryh
+^coef\d_run
+^cplscale
+^mod23_lut
+^interplay_
+^atrac3p_
+^vc1_
+^dss_sp_
+^mpc8_
+^ccitt_
+^derf_steps
+^block_runs
+^coeff_table_token
+^dext
+^arg_var
+^quality
+^_error_code_map
+^_vorbis
+^vorbis_
+^ov_
+^mdct_
+^drft_
+^_ogg
+^ogg_
+^BZ2_
+^lzma_
+^lenfix
+^distfix
+^uhc_
+^_DefaultRuneLocale
+^_C_ctype_
+^crc32_table
+# Mesa (RADV, PS5 Vulkan build): its CRC-32 table and zlib inflate fixed tables.
+^util_crc32_table$
+^fixedtables\.lenfix$

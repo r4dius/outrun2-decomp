@@ -1,0 +1,23 @@
+--- a/src/vulkan/wsi/wsi_common_videoout.c	2026-10-07 12:03:17.857181252 +0200
++++ b/src/vulkan/wsi/wsi_common_videoout.c	2026-10-07 12:03:17.857181252 +0200
+@@ -383,14 +383,13 @@
+             : supported;
+       out->high_frame_rate = configured == 0;
+       if (out->high_frame_rate) {
++         /* Before any buffer is registered the vblank waits do not follow the
++          * new mode: 20.873 ms, steadily, on a 4K 120 Hz television after
++          * VideoOut accepted it (OutRun 2006 port, 2026-10-07). VideoOut's
++          * acceptance is trusted; the period is only reported. */
+          const uint64_t period = videoout_vblank_period_ns(out->handle);
+-         if (period > VIDEOOUT_HIGH_REFRESH_LIMIT_NS) {
+-            sceVideoOutConfigureOutput(out->handle, PS5_VIDEO_OUT_MODE_RESTORE, NULL, NULL, NULL);
+-            out->high_frame_rate = false;
+-            fprintf(stderr,
+-                    "wsi/videoout: 119.88 Hz accepted, but a vblank comes every %.3f ms; 59.94 Hz restored\n",
+-                    (double)period / 1e6);
+-         }
++         fprintf(stderr, "wsi/videoout: 119.88 Hz accepted (vblank period before registration %.3f ms)\n",
++                 (double)period / 1e6);
+       } else {
+          fprintf(stderr, "wsi/videoout: 119.88 Hz %s (%d); presenting at 59.94 Hz\n",
+                  supported > 0 ? "refused" : "not supported", configured);

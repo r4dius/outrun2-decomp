@@ -1,0 +1,37 @@
+# Accepted service null-checks for tools/decomp_empty_services.py.
+# Format: <file>|<function>|<kind>|<expression> # <why the skip is not a hole>
+# Only host hooks, diagnostics and audio backends belong here: a ported
+# function that skips original work on a null service must report through
+# driving::service_hole() or fall back to the translation instead.
+
+src/input/runtime_adapter.cpp|sample_input|silent-skip|adapter.current_mode # host platform hook: each platform backend sets it or has no such device
+src/platform/native_car_select.cpp|native_music_virtual|silent-skip|x.music_play # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/native_car_select.cpp|native_music_virtual|silent-skip|x.music_stop # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/native_car_select.cpp|showroom_external|silent-skip|st.music_play # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/native_car_select.cpp|showroom_external|silent-skip|st.music_stop # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/native_runtime.cpp|native_music_call|silent-skip|f.music_play # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/native_runtime.cpp|native_music_call|silent-skip|f.music_stop # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/native_runtime.cpp|run_native_frame_loop|silent-skip|s.platform_wait # optional frame-pacing observer of the host loop
+src/platform/pc_frame_render.cpp|frame_render_449050|silent-skip|sv.mode_84a318 # not silent: falls back to the frame input word in.mode_84a318
+src/platform/pc_scene_renderer.cpp|Timer|silent-skip|r.profile # profiler hook, diagnostics only
+src/platform/race_area_runtime.cpp|effect_4249f0|silent-skip|f.frontend_effect # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/race_end_runtime.cpp|run_end|silent-skip|c.race.sound.stop_all # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/race_end_runtime.cpp|run_end|silent-skip|f.music_play # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/race_end_runtime.cpp|run_end|silent-skip|f.music_stop # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/race_hud_runtime.cpp|run_navi_draws|silent-skip|c.event_function36.frontend_effect # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/race_sound_runtime.cpp|pc_427630|silent-skip|s.stop_all # platform audio backend: null only when the host runs without audio (headless checks)
+src/platform/race_translated.cpp|void|silent-skip|o.mock # difftest harness option (mock services / rewind), not game code
+src/platform/race_translated.cpp|race_diff_run|silent-skip|o.mock # difftest harness option (mock services / rewind), not game code
+src/platform/race_translated.cpp|race_diff_run|silent-skip|o.rewind # difftest harness option (mock services / rewind), not game code
+src/recomp/x86rt.hpp|host|silent-skip|c.mem_at # translated-code memory: a null mem_at means the flat guest image is used
+src/runtime/game_host.cpp|AudioThread::start|silent-skip|s.audio_thread_setup # host platform hook: each platform backend sets it or has no such device
+src/runtime/game_host.cpp|frontend_frame|silent-skip|s.movie_clock_reset # host platform hook: each platform backend sets it or has no such device
+src/runtime/game_host.cpp|input_sample|silent-skip|s.read_pad # host platform hook: each platform backend sets it or has no such device
+src/runtime/game_host.cpp|input_sample|silent-skip|s.platform_keys # host platform hook: each platform backend sets it or has no such device
+src/runtime/game_host.cpp|input_sample|silent-skip|s.map_input # host platform hook: each platform backend sets it or has no such device
+src/runtime/game_host.cpp|input_sample|silent-skip|s.sample_status # host platform hook: each platform backend sets it or has no such device
+src/system/setup_screen.cpp|exe_setup_prepare|silent-skip|platform.present # host platform hook: each platform backend sets it or has no such device
+src/system/setup_screen.cpp|exe_setup_prepare|silent-skip|platform.wait_for_exit # host platform hook: each platform backend sets it or has no such device
+src/driving/pc_course_query.cpp|find_secondary_course_run|silent-skip|t.runs.present # the original's own null test of the course run table (returns 0 runs), not a service
+src/driving/pc_course_topology.cpp|find_primary_course_run|silent-skip|t.present # the original's own null test of the course run table (returns 0 runs), not a service
+src/platform/native_runtime.cpp|native_runtime_event_function36_invoke|bare-object|PcObjectRuntimeTeardownServicesservices # known hole: the event-36 destroy runs 49E4C0 -> 443C30 with no services (the boards are released by hand just before); the teardown reports each skipped call through service_hole

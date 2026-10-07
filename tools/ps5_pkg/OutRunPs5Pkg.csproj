@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- PS5 package of the title folder (Program.cs), run by tools/build_ps5_pkg.ps1. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- LibProsperoPkg checkout made by tools/setup_ps5_pkg_tools.sh (not in the repository). -->
+    <LibProsperoPkgDir Condition="'$(LibProsperoPkgDir)'==''">$(MSBuildThisFileDirectory)../../build-ps5-pkg-tools/LibProsperoPKG</LibProsperoPkgDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(LibProsperoPkgDir)/src/LibProsperoPkg/LibProsperoPkg.csproj" />
+  </ItemGroup>
+</Project>

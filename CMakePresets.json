@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "mac-arm64",
+      "displayName": "macOS ARM64 / Metal",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/macos",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "14.0",
+        "OR2_X87_FAST": "ON"
+      }
+    },
+    {
+      "name": "mac-full",
+      "displayName": "macOS ARM64 / Metal + SDL + codecs",
+      "inherits": "mac-arm64",
+      "environment": {
+        "PKG_CONFIG_PATH": "${sourceDir}/build/dependencies/lib/pkgconfig"
+      },
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "${sourceDir}/build/dependencies",
+        "PKG_CONFIG_EXECUTABLE": "${sourceDir}/build/dependencies/bin/pkgconf",
+        "OR2_MAC_SDL": "ON",
+        "OR2_MAC_MEDIA": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "mac-arm64",
+      "configurePreset": "mac-arm64"
+    },
+    {
+      "name": "mac-full",
+      "configurePreset": "mac-full"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "mac-arm64",
+      "configurePreset": "mac-arm64",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "mac-full",
+      "configurePreset": "mac-full",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

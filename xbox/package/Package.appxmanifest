@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OutRun 2006 Coast 2 Coast, Xbox port (UWP, Developer Mode sideloading).
+     The publisher must match the subject of the project test certificate. -->
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         IgnorableNamespaces="uap rescap mp">
+  <Identity Name="OutRun2006C2C.Port" Publisher="CN=OutRun2006 Port" Version="0.1.0.0" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="6b0f3c58-9d2a-4a1e-8f53-2b7c0e4d9a61" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>OutRun 2006 Coast 2 Coast</DisplayName>
+    <PublisherDisplayName>OutRun 2006 port</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="OutRunXbox.exe" EntryPoint="OutRunXbox.App">
+      <uap:VisualElements DisplayName="OutRun 2006 Coast 2 Coast" Description="OutRun 2006 Coast 2 Coast port (reads your own Steam game files)"
+                          BackgroundColor="#000000" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#000000" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <!-- The player's game folder on a USB drive (OutRun2006 at its root). -->
+    <rescap:Capability Name="broadFileSystemAccess" />
+    <uap:Capability Name="removableStorage" />
+    <!-- LAN races (ported last). -->
+    <Capability Name="privateNetworkClientServer" />
+  </Capabilities>
+</Package>

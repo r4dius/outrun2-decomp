@@ -1,0 +1,84 @@
+address,reason
+4021b0,instruction virtualised on the FXT (4021b0 sub    esp 0x104): same oracle verdict on Steam and FXT 2026-10-05
+4035f0,instruction virtualised on the FXT (4035f2 push   0x594a4b): same oracle verdict on Steam and FXT 2026-10-05
+405830,marker (signature bytes skipped on Steam, no effect)
+40a7d0,instruction virtualised on the FXT (40a7d0 mov    eax ds:0x89b564): same oracle verdict on Steam and FXT 2026-10-05
+40f4e0,instruction virtualised on the FXT (40f4e2 push   0x594b38): same oracle verdict on Steam and FXT 2026-10-05
+414790,instruction virtualised on the FXT (4147a8 mov    eax ds:0x95af18): same oracle verdict on Steam and FXT 2026-10-05
+416420,marker (signature bytes skipped on Steam, no effect)
+417890,instruction virtualised on the FXT (417894 push   0x8a8c98): same oracle verdict on Steam and FXT 2026-10-05
+4231e0,marker (signature bytes skipped on Steam, no effect)
+4239c0,instruction virtualised on the FXT (4239c1 mov    eax ds:0x955a80): same oracle verdict on Steam and FXT 2026-10-05
+428320,instruction virtualised on the FXT (428332 mov    DWORD PTR [esp+0xc] 0xffffffff): same oracle verdict on Steam and FXT 2026-10-05
+429920,instruction virtualised on the FXT (42992f mov    edx DWORD PTR [eax*4+0x9565b0]): same oracle verdict on Steam and FXT 2026-10-05
+42ca60,instruction virtualised on the FXT (42ca68 mov    esi DWORD PTR ds:0x76f7b8): same oracle verdict on Steam and FXT 2026-10-05
+42d280,instruction virtualised on the FXT (42d286 mov    ecx 0x12): same oracle verdict on Steam and FXT 2026-10-05
+42d710,marker (signature bytes skipped on Steam, no effect)
+42deb0,instruction virtualised on the FXT (42debc add    eax 0x956d88): same oracle verdict on Steam and FXT 2026-10-05
+42e490,marker (signature bytes skipped on Steam, no effect)
+42e4f0,marker (signature bytes skipped on Steam, no effect)
+42e850,marker (signature bytes skipped on Steam, no effect)
+42e8c0,marker (signature bytes skipped on Steam, no effect)
+435ff0,instruction virtualised on the FXT (435ffb mov    BYTE PTR [esi+0x395] bl): same oracle verdict on Steam and FXT 2026-10-05
+43f860,instruction virtualised on the FXT (43f860 mov    al ds:0x780260): same oracle verdict on Steam and FXT 2026-10-05
+440110,instruction virtualised on the FXT (440114 mov    cl BYTE PTR [edx+0x79fb48]): same oracle verdict on Steam and FXT 2026-10-05
+440930,instruction virtualised on the FXT (44094a mov    ecx 0x799b94): same oracle verdict on Steam and FXT 2026-10-05
+440d50,instruction virtualised on the FXT (440d50 mov    eax ds:0x7b11c0): same oracle verdict on Steam and FXT 2026-10-05
+441200,instruction virtualised on the FXT (44121b mov    al BYTE PTR [esi+0x220]): same oracle verdict on Steam and FXT 2026-10-05
+443c30,instruction virtualised on the FXT (443c38 lea    ecx [esi+0x51c]): same oracle verdict on Steam and FXT 2026-10-05
+4447d0,instruction virtualised on the FXT (4447e5 lea    ecx [esi+0xcf4]): same oracle verdict on Steam and FXT 2026-10-05
+444fe0,instruction virtualised on the FXT (444fff mov    ecx DWORD PTR [esi+0x484]): same oracle verdict on Steam and FXT 2026-10-05
+445500,instruction virtualised on the FXT (44581c mov    ecx DWORD PTR [eax+0x488]): same oracle verdict on Steam and FXT 2026-10-05
+446d90,instruction virtualised on the FXT (446d94 mov    eax DWORD PTR [esi+0x408]): same oracle verdict on Steam and FXT 2026-10-05
+448520,instruction virtualised on the FXT (448520 mov    eax ds:0x7b17f0): same oracle verdict on Steam and FXT 2026-10-05
+448960,instruction virtualised on the FXT (448967 mov    edx DWORD PTR [eax*8+0x7c2814]): same oracle verdict on Steam and FXT 2026-10-05
+449040,instruction virtualised on the FXT (449044 mov    ds:0x7d2614 eax): same oracle verdict on Steam and FXT 2026-10-05
+44b7b0,instruction virtualised on the FXT (44b7b0 mov    al ds:0x7d33d0): same oracle verdict on Steam and FXT 2026-10-05
+44bdd0,instruction virtualised on the FXT (44bdd0 mov    eax ds:0x7d3188): same oracle verdict on Steam and FXT 2026-10-05
+44c220,instruction virtualised on the FXT (44c227 mov    eax ds:0x7d30bc): same oracle verdict on Steam and FXT 2026-10-05
+44c640,instruction virtualised on the FXT (44c640 mov    al ds:0x79fcce): same oracle verdict on Steam and FXT 2026-10-05
+44da00,instruction virtualised on the FXT (44da2f mov    eax ds:0x5a4370): same oracle verdict on Steam and FXT 2026-10-05
+44f0f0,instruction virtualised on the FXT (44f108 mov    eax 0x1): same oracle verdict on Steam and FXT 2026-10-05
+44f880,instruction virtualised on the FXT (44f886 mov    eax 0x1): same oracle verdict on Steam and FXT 2026-10-05
+4536f0,instruction virtualised on the FXT (453700 add    eax 0x7d6770): same oracle verdict on Steam and FXT 2026-10-05
+456d40,instruction virtualised on the FXT (456d40 mov    ecx 0x7de418): same oracle verdict on Steam and FXT 2026-10-05
+45a2b0,instruction virtualised on the FXT (45a2b0 cmp    DWORD PTR ds:0x78026c 0x10): same oracle verdict on Steam and FXT 2026-10-05
+4656b0,instruction virtualised on the FXT (4656b0 sub    esp 0xc0): same oracle verdict on Steam and FXT 2026-10-05
+465eb0,instruction virtualised on the FXT (465eb4 mov    ecx DWORD PTR ds:0x7f8d74): same oracle verdict on Steam and FXT 2026-10-05
+468c00,instruction virtualised on the FXT (468c00 mov    eax ds:0x7f9420): same oracle verdict on Steam and FXT 2026-10-05
+4755c0,instruction virtualised on the FXT (4755c6 lea    edx [eax+0x16c]): same oracle verdict on Steam and FXT 2026-10-05
+479a70,instruction virtualised on the FXT (479a76 movsx  eax BYTE PTR [esp+0xc]): same oracle verdict on Steam and FXT 2026-10-05
+48b130,instruction virtualised on the FXT (48b134 mov    ds:0x655b59 al): same oracle verdict on Steam and FXT 2026-10-05
+48c170,instruction virtualised on the FXT (48c180 mov    BYTE PTR [esi+0x90] cl): same oracle verdict on Steam and FXT 2026-10-05
+48e630,instruction virtualised on the FXT (48e630 mov    DWORD PTR [ecx] 0x5c18a0): same oracle verdict on Steam and FXT 2026-10-05
+48f280,instruction virtualised on the FXT (48f293 push   0x400): same oracle verdict on Steam and FXT 2026-10-05
+48f5f0,instruction virtualised on the FXT (48f74b cmp    DWORD PTR ds:0x6591e4 esi): same oracle verdict on Steam and FXT 2026-10-05
+495490,instruction virtualised on the FXT (495490 mov    al ds:0x8361b4): same oracle verdict on Steam and FXT 2026-10-05
+4958c0,instruction virtualised on the FXT (4958c4 mov    ecx DWORD PTR ds:0x836370): same oracle verdict on Steam and FXT 2026-10-05
+49b2d0,instruction virtualised on the FXT (49b2d0 mov    ax ds:0x8367bc): same oracle verdict on Steam and FXT 2026-10-05
+49dd40,instruction virtualised on the FXT (49e2f0 add    esp 0x8c): same oracle verdict on Steam and FXT 2026-10-05
+49eed0,instruction virtualised on the FXT (49eed0 mov    eax ds:0x83daf4): same oracle verdict on Steam and FXT 2026-10-05
+49fa60,instruction virtualised on the FXT (49fa63 mov    ds:0x841bc9 al): same oracle verdict on Steam and FXT 2026-10-05
+4a3f80,instruction virtualised on the FXT (4a3f8a mov    eax DWORD PTR [esi+0x10d0]): same oracle verdict on Steam and FXT 2026-10-05
+4a45f0,instruction virtualised on the FXT (4a45f9 mov    edi DWORD PTR [ebx+0x230]): same oracle verdict on Steam and FXT 2026-10-05
+4a5830,instruction virtualised on the FXT (4a583c mov    cl BYTE PTR ds:0x841bc8): same oracle verdict on Steam and FXT 2026-10-05
+4a69f0,instruction virtualised on the FXT (4a69ff lea    ecx [esi+0x900]): same oracle verdict on Steam and FXT 2026-10-05
+4b00d0,instruction virtualised on the FXT (4b00d0 mov    ecx DWORD PTR ds:0x8421c0): same oracle verdict on Steam and FXT 2026-10-05
+4c50d0,instruction virtualised on the FXT (4c50d0 mov    BYTE PTR ds:0x84a9fd 0x1): same oracle verdict on Steam and FXT 2026-10-05
+4c8f90,instruction virtualised on the FXT (4c8f9d movsx  eax WORD PTR [eax*2+0x68ea88]): same oracle verdict on Steam and FXT 2026-10-05
+4d5d00,instruction virtualised on the FXT (4d5d2b cmp    DWORD PTR [eax+0x218] 0x2): same oracle verdict on Steam and FXT 2026-10-05
+4d6630,instruction virtualised on the FXT (4d66a6 mov    ecx 0x659930): same oracle verdict on Steam and FXT 2026-10-05
+4d6a60,instruction virtualised on the FXT (4d6d6f cmp    DWORD PTR [esi+0x1d68] 0x1): same oracle verdict on Steam and FXT 2026-10-05
+4d7300,instruction virtualised on the FXT (4d7317 cmp    DWORD PTR [eax+0x218] 0x3): same oracle verdict on Steam and FXT 2026-10-05
+4d7b80,instruction virtualised on the FXT (4d7c06 mov    ecx 0x7c24f0): same oracle verdict on Steam and FXT 2026-10-05
+4d7fb0,instruction virtualised on the FXT (4d820b mov    DWORD PTR [esi+0x1d70] 0xffffffff; 4d8707 cmp    DWORD PTR [eax+0x218] 0x3): same oracle verdict on Steam and FXT 2026-10-05
+4dd590,instruction virtualised on the FXT (4dd590 or     BYTE PTR [ecx+0x3f4] 0x2): same oracle verdict on Steam and FXT 2026-10-05
+4e1cf0,instruction virtualised on the FXT (4e1f3e mov    DWORD PTR [esi+0x578] ebx): same oracle verdict on Steam and FXT 2026-10-05
+4e8780,instruction virtualised on the FXT (4e87e5 mov    ecx DWORD PTR [eax+0x208]): same oracle verdict on Steam and FXT 2026-10-05
+4e9360,instruction virtualised on the FXT (4e93cf mov    edx DWORD PTR [eax+0x208]): same oracle verdict on Steam and FXT 2026-10-05
+4ed8d0,instruction virtualised on the FXT (4ed8ec mov    eax DWORD PTR [eax+0x174]): same oracle verdict on Steam and FXT 2026-10-05
+4efb50,instruction virtualised on the FXT (4efb50 mov    eax ds:0x84ce68): same oracle verdict on Steam and FXT 2026-10-05
+4f0d10,instruction virtualised on the FXT (4f0d14 mov    eax DWORD PTR [ecx*4+0x84d6cc]): same oracle verdict on Steam and FXT 2026-10-05
+4f3cc0,instruction virtualised on the FXT (4f3cc6 mov    DWORD PTR [esp+0x1c] 0x84e580): same oracle verdict on Steam and FXT 2026-10-05
+4f6e40,instruction virtualised on the FXT (4f6e56 mov    BYTE PTR [ebp+0x334] cl): same oracle verdict on Steam and FXT 2026-10-05
+499730,instruction virtualised on the FXT (499857 mov eax 0x1): read again against Steam (1 << notice) 2026-10-05

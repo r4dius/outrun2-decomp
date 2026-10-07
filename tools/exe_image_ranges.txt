@@ -1,0 +1,3 @@
+# PC ranges of OR2006C2C.EXE read by hand-ported code through exe_image_bytes
+# (in addition to the ranges named by the table generators).
+# One range per line: <hex address> <size>  # comment

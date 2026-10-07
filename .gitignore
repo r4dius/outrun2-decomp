@@ -1,0 +1,44 @@
+# Build outputs
+build/
+build-*/
+deliver/
+release/
+bin/
+obj/
+*.o
+*.a
+*.elf
+*.nro
+*.nso
+*.nacp
+*.pkg
+*.dksh
+__pycache__/
+*.pyc
+.DS_Store
+
+# Game files and anything made from them: never committed
+*.exe
+*.EXE
+*.dll
+*.sz
+*.bin
+*.bik
+*.ogg
+*.dds
+!ps5/sce_sys/*.dds
+*.at9
+Cache/
+SaveGame/
+runtime-data/
+*.zip
+*.7z
+
+# Local files
+*.log
+options.ini
+retail-root.txt
+.export-manifest
+
+# Work files (notes, reports, scratch): never committed
+work/
