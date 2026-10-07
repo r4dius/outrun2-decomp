@@ -1,3 +1,18 @@
+# Status #
+
+It is not finished yet, so bugs are to be expected.
+Some menus are incorrect, and some visual effects, performance-related aspects,
+game behaviors, and functionality are not final yet.
+Some early enhancements have already been added, including:
+- multiple anti-aliasing methods
+- multiple resolution options
+- widescreen support
+- 120 FPS support
+
+Once the decompilation is complete and the remaining issues are fixed,
+additional enhancements will be added, including features from at least:
+https://github.com/emoose/OutRun2006Tweaks
+
 # OutRun 2006 Coast 2 Coast: native port
 
 A native port of the PC version of OutRun 2006 Coast 2 Coast (Sumo Digital /
